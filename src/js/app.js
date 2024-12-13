@@ -1,14 +1,10 @@
-export default function destructuring(charaster) {
-    const result = [];
-    const { special } = charaster;
-
-    special.forEach((element) => {
-        const {
-             id, name, icon, description = 'Описание недоступно',
-            } = element;
-        result.push({
-            id, name, icon, description,
-        });
-    });
-    return result;
+export default function destructuring({ special }) {
+    return special.map(({
+         id, name, icon, description = 'Описание недоступно',
+        }) => ({
+        id,
+        name,
+        icon,
+        description,
+    }));
 }
