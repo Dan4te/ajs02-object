@@ -1,22 +1,14 @@
-export default function destructuring(obj) {
+export default function destructuring(charaster) {
     const result = [];
-    const { special } = obj;
+    const { special } = charaster;
 
-    if (!special) {
-        return result;
-    }
-
-    for (let i = 0; i < special.length; i += 1) {
-        if (!special[i].description) {
-            special[i].description = 'Описание недоступно';
-        }
+    special.forEach((element) => {
+        const {
+             id, name, icon, description = 'Описание недоступно',
+            } = element;
         result.push({
-            id: special[i].id,
-            name: special[i].name,
-            icon: special[i].icon,
-            description: special[i].description,
+            id, name, icon, description,
         });
-    }
-
+    });
     return result;
 }
