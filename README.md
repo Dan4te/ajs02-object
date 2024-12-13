@@ -1,4 +1,4 @@
-
+[![Build status](https://ci.appveyor.com/api/projects/status/veswkyegnet6ngx4?svg=true)](https://ci.appveyor.com/project/Dan4te/ajs02-object)
 
 ## Destructuring
 
