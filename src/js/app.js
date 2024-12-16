@@ -1,10 +1,3 @@
 export default function destructuring({ special }) {
-    return special.map(({
-         id, name, icon, description = 'Описание недоступно',
-        }) => ({
-        id,
-        name,
-        icon,
-        description,
-    }));
+    return special.map(({ description = 'Описание недоступно', ...skills }) => ({ ...skills, description }));
 }
